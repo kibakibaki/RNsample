@@ -18,6 +18,7 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 import LoginScreen from "./app/screens/LoginScreen.js";
 import TestScreen from "./app/screens/TestScreen.js";
 import AuthNavigator from "./app/naviagation/AuthNavigator.js";
+import HomeScreen from "./app/screens/HomeScreen.js";
 
 /****************************************************************/
 const blurRadiusValue = Platform.OS === "ios" ? 0.5 : 0.7;
@@ -61,9 +62,10 @@ export default function App() {
     // <LoginScreen />
     // <RegisterScreen />
     // <TestScreen />
-    <NavigationContainer>
-      <AuthNavigator />
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <AuthNavigator />
+    // </NavigationContainer>
+    <HomeScreen />
     /****************************************************************/
   );
 }

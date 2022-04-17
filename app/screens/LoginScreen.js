@@ -43,7 +43,7 @@ function LoginScreen(props) {
           size={100}
           color={AppColors.otherColor}
         />
-        <AppText>Welcome!</AppText>
+        <AppText style={{ fontSize: 30 }}>Welcome!</AppText>
       </View>
 
       <Formik

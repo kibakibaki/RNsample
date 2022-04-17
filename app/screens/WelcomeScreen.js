@@ -31,7 +31,7 @@ function WelcomeScreen({ navigation }) {
             size={100}
             color={AppColors.otherColor}
           />
-          <AppText>Welcome!</AppText>
+          <AppText style={{ fontSize: 30 }}>Welcome!</AppText>
         </View>
 
         <View style={styles.buttonContainer}>

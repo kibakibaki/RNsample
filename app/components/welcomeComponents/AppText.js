@@ -8,7 +8,7 @@ function AppText({ style, children }) {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 40,
+    fontSize: 16,
     color: "white",
     fontFamily: Platform.OS === "android" ? "Roboto" : "Cochin",
   },
