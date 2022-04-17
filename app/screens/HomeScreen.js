@@ -11,6 +11,7 @@ import AppIcon from "../components/AppIcon";
 function HomeScreen(props) {
   return (
     <AppScreen prop_from_Screenjs={styles.container}>
+      {/*This component refers to the logo */}
       <View style={styles.welcomeContainer}>
         <MaterialCommunityIcons
           style={styles.welcomeContainer}
@@ -20,6 +21,7 @@ function HomeScreen(props) {
         />
       </View>
 
+      {/*this componentdisplays the profile list */}
       <View style={styles.profileContainer}>
         <AppListItem
           image={require("../assets/user1.jpg")}
@@ -28,12 +30,40 @@ function HomeScreen(props) {
         />
       </View>
 
-      <AppIcon
-        name="book-open-variant"
-        size={40}
-        iconColor={AppColors.otherColor}
-        backgroundColor="white"
-      />
+      <View style={{ alignItems: "center" }}>
+        <MaterialCommunityIcons
+          name="arrow-down-thick"
+          iconColor={AppColors.otherColor}
+          size={60}
+          backgroundColor="transparent"
+        />
+      </View>
+
+      <View style={styles.linkContainer}>
+        <AppListItem
+          title="My Book"
+          IconComponent={
+            <AppIcon
+              name="book-open-variant"
+              size={30}
+              iconColor={AppColors.otherColor}
+              backgroundColor="transparent"
+            />
+          }
+          iconMargin={styles.profileContainer}
+        />
+        <AppListItem
+          title="My Author"
+          IconComponent={
+            <AppIcon
+              name="account"
+              size={30}
+              iconColor={AppColors.otherColor}
+              backgroundColor="transparent"
+            />
+          }
+        />
+      </View>
     </AppScreen>
   );
 }
@@ -45,18 +75,17 @@ const styles = StyleSheet.create({
     padding: 50, //does not work
     // flexDirection: "row",
     // borderRadius: 50,
-    // marginVertical: 20,
+    // marginVertical: 100,
+
     width: "100%",
   },
   welcomeContainer: {
-    // flex: 0.3,
     justifyContent: "center",
     alignItems: "center",
     marginTop: 50,
   },
   profileContainer: {
     justifyContent: "center",
-    height: 90,
     width: "90%",
     marginTop: 100,
     borderWidth: 2,
@@ -64,6 +93,19 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     marginLeft: 20,
     marginRight: 20,
+    backgroundColor: "transparent",
+    overflow: "hidden",
+  },
+  linkContainer: {
+    height: 150,
+    justifyContent: "space-around",
+    backgroundColor: "#f2eadf",
+    // borderRadius: 30,
+    shadowColor: AppColors.secondaryColor,
+    marginLeft: 20,
+    marginRight: 20,
+    borderWidth: 2,
+    borderColor: "brown",
   },
 });
 

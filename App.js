@@ -11,6 +11,7 @@ import AppText from "./app/components/welcomeComponents/AppText.js";
 import AppButton from "./app/components/welcomeComponents/AppButton.js";
 import AppScreen from "./app/components/AppScreen";
 import RegisterScreen from "./app/screens/RegisterScreen";
+import MyAuthorScreen from "./app/screens/MyAuthorScreen";
 
 /****************************************************************/
 //import welcome and login screen
@@ -19,6 +20,7 @@ import LoginScreen from "./app/screens/LoginScreen.js";
 import TestScreen from "./app/screens/TestScreen.js";
 import AuthNavigator from "./app/naviagation/AuthNavigator.js";
 import HomeScreen from "./app/screens/HomeScreen.js";
+import MyBookScreen from "./app/screens/MyBookScreen.js";
 
 /****************************************************************/
 const blurRadiusValue = Platform.OS === "ios" ? 0.5 : 0.7;
@@ -62,10 +64,12 @@ export default function App() {
     // <LoginScreen />
     // <RegisterScreen />
     // <TestScreen />
+    // <HomeScreen />
     // <NavigationContainer>
     //   <AuthNavigator />
     // </NavigationContainer>
-    <HomeScreen />
+    // <MyBookScreen />
+    <MyAuthorScreen />
     /****************************************************************/
   );
 }

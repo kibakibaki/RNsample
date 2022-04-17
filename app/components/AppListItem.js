@@ -1,20 +1,43 @@
 import React from "react";
-import { View, StyleSheet, Image, Text } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Image,
+  Text,
+  TouchableHighlight,
+} from "react-native";
 
-function AppListItem({ image, title, subtitle }) {
+import AppColors from "../config/AppColors.js";
+
+function AppListItem({ image, title, subtitle, IconComponent, onPress }) {
   return (
-    <View style={styles.container}>
-      <Image source={image} style={styles.image} />
-      <View style={styles.textContainer}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.subtitle}>{subtitle}</Text>
+    <TouchableHighlight
+      onPress={onPress}
+      underlayColor="white"
+      style={{
+        marginLeft: 10,
+        marginRight: 10,
+        borderRadius: 20,
+      }}
+    >
+      <View style={styles.container}>
+        {IconComponent}
+        {image && <Image source={image} style={styles.image} />}
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>{title}</Text>
+          {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+        </View>
       </View>
-    </View>
+    </TouchableHighlight>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: AppColors.蛋黄,
+    borderWidth: 0.4,
+    borderRadius: 20,
+    padding: 10,
     flexDirection: "row",
   },
   image: {
@@ -24,15 +47,18 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   textContainer: {
+    justifyContent: "space-around",
     marginLeft: 20,
     flexDirection: "column",
   },
   title: {
     fontWeight: "bold",
-    marginVertical: 15,
+    fontSize: 20,
+    // marginVertical: 15,
   },
   subtitle: {
     fontSize: 12,
+    color: "grey",
   },
 });
 

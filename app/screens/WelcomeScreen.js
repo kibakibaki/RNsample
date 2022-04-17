@@ -66,15 +66,13 @@ const styles = StyleSheet.create({
     // backgroundColor: "red",
     marginTop: 50,
     flexDirection: "column",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     height: 200,
-
     // justifyContent: "center",
     alignItems: "center",
     alignSelf: "flex-end",
     width: "50%",
     // backgroundColor: "red",
-
     /* 3. the butttons are aligned to the edge without any edge,
     is there any way to leave a bit?*/
   },

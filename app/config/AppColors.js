@@ -3,4 +3,5 @@ export default {
   primaryColor: "#dfd9d4",
   secondaryColor: "#824c28",
   米色: "#ddcdb3",
+  蛋黄: "#ffc64d",
 };
